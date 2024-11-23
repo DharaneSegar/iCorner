@@ -1,0 +1,18 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Default state -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/secondary" />
+            <corners android:radius="20dp" />
+            <stroke android:color="@color/secondary" android:width="2dp" />
+        </shape>
+    </item>
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/secondaryLight" /> <!-- Change to the color you want when pressed -->
+            <corners android:radius="20dp" />
+            <stroke android:color="@color/secondaryLight" android:width="2dp" /> <!-- Change to the color you want when pressed -->
+        </shape>
+    </item>
+</selector>

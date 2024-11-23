@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "name": "Dashboard",
+      "icon": [
+        "fas",
+        "chart-line"
+      ],
+      "link": "/admin/dashboard",
+      "subMenu": []
+    },
+    {
+      "name": "User Management",
+      "icon": [
+        "fas",
+        "users"
+      ],
+      "subMenu": [
+        {
+          "name": "View Admins",
+          "icon": [
+            "fas",
+            "user-shield"
+          ],
+          "link": "/users/view-admins"
+        },
+        {
+          "name": "View Vendors",
+          "icon": [
+            "fas",
+            "store"
+          ],
+          "link": "/users/view-vendors"
+        },
+        {
+          "name": "View CSRs",
+          "icon": [
+            "fas",
+            "headset"
+          ],
+          "link": "/users/view-csrs"
+        },
+        {
+          "name": "View Customers",
+          "icon": [
+            "fas",
+            "user"
+          ],
+          "link": "/users/view-customers"
+        }
+      ]
+    },
+    {
+      "name": "Category Management",
+      "icon": [
+        "fas",
+        "book-open"
+      ],
+      "link": "/admin-category/view-category",
+      "subMenu": []
+    },
+    {
+      "name": "Product Management",
+      "icon": [
+        "fas",
+        "book-open"
+      ],
+      "link": "/admin-product/view-product",
+      "subMenu": []
+    },
+    {
+      "name": "Inventory Management",
+      "icon": [
+        "fas",
+        "user-graduate"
+      ],
+      "link": "/admin-inventory/view-inventory"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+    "data": [
+        {
+            "name": "Dashboard",
+            "icon": [
+                "fas",
+                "chart-line"
+            ],
+            "link": "/vendor/dashboard",
+            "subMenu": []
+        },
+        {
+            "name": "Product Management",
+            "icon": [
+                "fas",
+                "book-open"
+            ],
+            "link": "/product/view-product",
+            "subMenu": []
+        },
+        {
+            "name": "View Comments",
+            "icon": [
+                "fas",
+                "book-open"
+            ],
+            "link": "/vendor/comments",
+            "subMenu": []
+        },
+        {
+            "name": "Orders",
+            "icon": [
+                "fas",
+                "clipboard-list"
+            ],
+            "link": "/vendor/orders",
+            "subMenu": [
+                {
+                    "name": "View All Orders",
+                    "link": "/vendor/orders"
+                },
+                {
+                    "name": "Pending Orders",
+                    "link": "/vendor/orders/pending"
+                },
+                {
+                    "name": "Completed Orders",
+                    "link": "/vendor/orders/completed"
+                },
+                {
+                    "name": "Accepted Orders",
+                    "link": "/vendor/orders/accepted"
+                }
+            ]
+        }
+    ]
+}

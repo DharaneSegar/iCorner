@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:paddingTop="0dp"
+    android:orientation="vertical"
+    android:background="@drawable/blury_background">
+
+    <include
+        layout="@layout/main_toolbar" />
+
+    <!-- ScrollView to wrap everything except the total and checkout button -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Bar with Back Button and Cart Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:gravity="center_vertical">
+
+
+
+                <TextView
+                    android:id="@+id/commentTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="My Comments"
+                    android:textAlignment="center"
+                    android:textColor="@color/g_blue"
+                    style="@style/h3"
+                    android:layout_marginTop="10dp"
+
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:layout_gravity="end"
+                android:gravity="end"/>
+
+            <!-- RecyclerView for Cart Items -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:padding="20dp"
+                android:paddingBottom="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Checkout Layout at the bottom -->
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="4dp"/>
+
+</LinearLayout>

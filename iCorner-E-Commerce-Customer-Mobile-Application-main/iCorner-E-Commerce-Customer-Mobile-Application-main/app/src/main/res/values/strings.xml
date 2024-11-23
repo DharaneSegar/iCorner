@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">iCorner</string>
+    <string name="intro_title">Welcome to \niCorner!!!</string>
+    <string name="intro_message">Discover the ultimate shopping experience! \nAt iCorner, we bring you the latest and greatest apple products, all in one place.</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="full_screen_image">Full Screen View</string>
+    <string name="close_image">Close</string>
+    <string name="cart_button">Add to Cart</string>
+    <string name="buy_now_button">Buy Now</string>
+    <string-array name="product_categories">
+        <item>All</item>
+        <item>iPhone</item>
+        <item>MacBook</item>
+        <item>iPad</item>
+        <item>Apple Watch</item>
+        <item>AirPods</item>
+    </string-array>
+    <string-array name="sorting_options">
+        <item>Default</item>
+        <item>A-Z</item>
+        <item>Z-A</item>
+        <item>Price: Low to High</item>
+        <item>Price: High to Low</item>
+        <item>Rating: Low to High</item>
+        <item>Rating: High to Low</item>
+    </string-array>
+
+    <string-array name="order_status">
+        <item>All</item>
+        <item>Processing</item>
+        <item>Completed</item>
+        <item>Cancelled</item>
+        <item>Dispatched</item>
+    </string-array>
+
+</resources>

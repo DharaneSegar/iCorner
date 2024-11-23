@@ -1,0 +1,21 @@
+.button-gray {
+    color: gray;
+}
+
+.button-gray:hover {
+    color: white; /* Change text color on hover */
+}
+
+.button-blue {
+    color: blue;
+}
+
+.button-blue:hover {
+    color: white; /* Change text color on hover */
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}

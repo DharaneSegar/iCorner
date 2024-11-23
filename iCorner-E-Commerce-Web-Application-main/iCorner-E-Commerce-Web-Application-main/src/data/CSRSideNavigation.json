@@ -1,0 +1,38 @@
+{
+    "data": [
+        {
+            "name": "Dashboard",
+            "icon": [
+                "fas",
+                "chart-line"
+            ],
+            "link": "/CSR/dashboard",
+            "subMenu": []
+        },
+        {
+            "name": "Customer Management",
+            "icon": [
+                "fas",
+                "users"
+            ],
+            "link": "/users/view-customers"
+        },
+        {
+            "name": "Product Management",
+            "icon": [
+                "fas",
+                "book-open"
+            ],
+            "link": "/product/view-product",
+            "subMenu": []
+        },
+        {
+            "name": "Inventory Management",
+            "icon": [
+                "fas",
+                "user-graduate"
+            ],
+            "link": "/inventory/view-inventory"
+        }
+    ]
+}

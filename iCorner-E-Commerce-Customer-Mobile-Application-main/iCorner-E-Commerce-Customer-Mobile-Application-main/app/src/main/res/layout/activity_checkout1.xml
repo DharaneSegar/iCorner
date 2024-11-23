@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ck1"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:paddingTop="0dp"
+    android:orientation="vertical"
+    android:background="@drawable/blury_background">
+
+
+<LinearLayout
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="0dp"
+    android:paddingTop="0dp"
+    android:orientation="vertical"
+    android:background="@drawable/blury_background">
+
+    <include
+        layout="@layout/main_toolbar" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- Top Bar with Back Button and Cart Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+
+
+                <TextView
+                    android:id="@+id/cartTitleTextView"
+                    style="@style/h4"
+                    android:textColor="@color/g_blue"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Checkout"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Header for Name and Address -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/userNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    style="@style/h2"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/userAddressEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="User Address"
+                    style="@style/h3"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- RecyclerView for Cart Items -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cartRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clipToPadding="false"
+                android:padding="20dp"
+                android:paddingBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius="8dp"
+                card_view:cardElevation="4dp"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/checkoutLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:orientation="vertical">
+
+                    <!-- Title "Summary" -->
+                    <TextView
+                        android:id="@+id/summaryTitleTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Summary"
+                        android:textStyle="bold"
+                        style="@style/h2"
+                        android:textSize="18sp"
+                        android:paddingBottom="10dp" />
+
+                    <!-- Subtotal Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="4dp">
+
+                        <TextView
+                            android:id="@+id/subtotalTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Subtotal"
+                            style="@style/h3"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/subtotalAmountTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0.00"
+                            style="@style/h3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Delivery Fee Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="4dp">
+
+                        <TextView
+                            android:id="@+id/deliveryFeeTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Fee"
+                            style="@style/h3"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/deliveryFeeAmountTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0.00"
+                            style="@style/h3"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <!-- Total Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingVertical="4dp">
+
+                        <TextView
+                            android:id="@+id/totalTextView"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            style="@style/h4"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/totalAmountTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0.00"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Payment Method Radio Buttons -->
+                    <RadioGroup
+                        android:id="@+id/paymentOptionsGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingVertical="10dp">
+
+                        <RadioButton
+                            android:id="@+id/radioCOD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cash on Delivery (COD)"
+                            style="@style/h2"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/radioVisa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Visa"
+                            style="@style/h2"
+                            />
+                    </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/notesEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Notes"
+                        style="@style/h3"
+                        android:textSize="14sp" />
+
+
+                    <!-- Checkout Button -->
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/payNowButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay Now"
+            android:textColor="@android:color/white"
+
+            android:padding="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@style/blueButtonStyle"
+            android:layout_marginBottom="15dp"
+
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+

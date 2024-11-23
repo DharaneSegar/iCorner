@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/main_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="20dp"
+        android:background="@drawable/blury_background">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardImage"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp">
+
+                        <ImageView
+                            android:id="@+id/productImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:maxHeight="400dp"
+                            android:scaleType="centerCrop" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/productNameTextView"
+                            android:text="Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:textSize="20sp"
+                            style="@style/h3"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/productCategoryTextView"
+                            android:text="Category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            style="@style/h2"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/productVendorTextView"
+                            android:text="Vendor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            style="@style/h2"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/productPriceTextView"
+                            android:text="Price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:textStyle="bold"
+                            style="@style/h3"
+                            android:textSize="24sp"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="@drawable/border_background"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/buttonMinus"
+                                android:layout_width="50sp"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:background="@color/g_blue"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:id="@+id/quantityTextView"
+                                android:layout_width="50sp"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:text="1"
+                                android:textSize="18sp" />
+
+                            <Button
+                                android:id="@+id/buttonPlus"
+                                android:layout_width="50sp"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:background="@color/g_blue"
+                                android:textColor="@android:color/white" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@color/divider_color"
+                        android:layout_gravity="center_horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Description"
+                            android:layout_marginTop="8dp"
+                            style="@style/h3"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/productDescriptionTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sample Description of Product. Directly imported from China at your door step."
+                            android:layout_marginTop="8dp"
+                            style="@style/h2"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Comment Section -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/commentFrame"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        app:cardElevation="8dp"
+                        android:clickable="false"
+                        android:layout_marginTop="30dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ratings:"
+                                    style="@style/h2"
+                                    android:layout_gravity="center" />
+
+                                <RatingBar
+                                    android:id="@+id/ratingBarInput"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="0dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:focusableInTouchMode="true"
+                                    android:numStars="5"
+                                    android:min="2"
+                                    android:progressTint="@color/gold"
+                                    android:rating="0.6"
+                                    android:scaleX="0.6"
+
+                                    android:scaleY="0.6"
+                                    android:stepSize="1" /> <!-- Adjust this value to control spacing -->
+                            </LinearLayout>
+
+
+                            <EditText
+                                android:id="@+id/commentEditTextInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top"
+                                android:hint="Enter your comments..."
+                                style="@style/h2"
+                                android:inputType="textMultiLine|textCapSentences"
+                                android:minHeight="100dp"
+                               />
+                            <Button
+                                android:id="@+id/updateReview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="5dp"
+                                android:text="Add Review"
+                                style="@style/blueButtonStyle"
+                                android:paddingStart="20dp"
+                                android:paddingEnd="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:textAllCaps="false" />
+
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="20dp"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp">
+
+                        <Button
+                            android:id="@+id/buttonAddToCart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/cart"
+                            android:drawablePadding="0dp"
+                            style="@style/blueButtonStyle"
+                            android:paddingStart="20dp"
+                            android:paddingEnd="20dp"
+                            android:text="Add to Cart"
+                            android:layout_marginBottom="30dp"
+                            android:layout_marginTop="20dp"/>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+</LinearLayout>

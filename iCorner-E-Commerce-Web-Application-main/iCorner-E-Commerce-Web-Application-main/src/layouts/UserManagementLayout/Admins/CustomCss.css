@@ -1,0 +1,62 @@
+.add-vendor-container {
+  background-color: #f8f9fa;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-heading {
+  font-family: "Roboto", sans-serif;
+  color: #000; /* Changed heading color to black */
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.input-field {
+  height: 45px; /* Making fields a bit taller */
+  font-size: 1.05rem; /* Slightly larger text for input */
+  width: 100%; /* Extending the input fields to take the full width */
+  border: 1px solid #000; /* Bolder edges for the input fields */
+  border-radius: 8px; /* Slightly rounded edges */
+  padding: 0.5rem;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+  border-color: #007bff; /* Blue border on focus */
+}
+
+.submit-btn {
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.text-center {
+  display: flex;
+  justify-content: center; /* Centering the button */
+}
+
+@media (max-width: 768px) {
+  .add-vendor-container {
+    padding: 1.5rem; /* Adjust padding for mobile view */
+  }
+
+  .main-heading {
+    font-size: 2rem; /* Slightly smaller heading for smaller screens */
+  }
+}

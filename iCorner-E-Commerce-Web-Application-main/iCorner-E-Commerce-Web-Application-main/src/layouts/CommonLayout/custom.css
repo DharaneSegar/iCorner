@@ -1,0 +1,32 @@
+.btn-dark {
+  background-color: #343a40 !important; /* Bootstrap dark */
+  color: #ffffff !important; /* White text */
+}
+
+.btn-dark:hover {
+  background-color: #23272b !important; /* Darker on hover */
+  color: #ffffff !important; /* Ensure text remains white */
+}
+
+.toast {
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.toast-body {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.toast-body svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+.text-center {
+  display: flex;
+  flex-direction: column; /* Ensure vertical stacking */
+  align-items: center; /* Center alignment */
+}
+h1,
+h3 {
+  margin: 1rem 0; /* Adjust as needed */
+}
